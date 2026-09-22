@@ -3,10 +3,11 @@ services:
     name: mini-spend-tracker
     env: python
     plan: free
+    healthCheckPath: /health
     buildCommand: npm install && npm run build --workspace frontend && cd backend && python -m pip install -r requirements.txt
     startCommand: cd backend && python run.py
     envVars:
-      - key: JWT_SECRET
+      - key: mau-is-mau-because-mau-is-mau
         generateValue: true
       - key: DATABASE_PATH
         value: /var/data/spend_tracker.db
