@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.local
+.env.*.local
+backend/data/*.db
+backend/data/*.db-shm
+backend/data/*.db-wal
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/

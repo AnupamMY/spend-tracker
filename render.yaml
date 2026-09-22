@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: mini-spend-tracker
+    env: python
+    plan: free
+    buildCommand: npm install && npm run build --workspace frontend && cd backend && python -m pip install -r requirements.txt
+    startCommand: cd backend && python run.py
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_PATH
+        value: /var/data/spend_tracker.db
+    disk:
+      name: spend-tracker-data
+      mountPath: /var/data
+      sizeGB: 1

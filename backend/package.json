@@ -1,0 +1,10 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "python run.py",
+    "start": "python run.py",
+    "test": "python -m pytest"
+  }
+}

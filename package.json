@@ -1,0 +1,14 @@
+{
+  "name": "team-expense-tracker",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev:backend": "cd backend && python run.py",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "test": "cd backend && python -m pytest"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ]
+}
